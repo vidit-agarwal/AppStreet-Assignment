@@ -1,6 +1,9 @@
 # AppStreet-Assignment
 Repo for App Street Assignment
 
+[![Heroku Deployed](https://heroku-badge.herokuapp.com/?app=appstreet-test)](https://appstreet-test.herokuapp.com/index.php)
+
+
 ## I have used following tech stack
 <br>`HTML`
 <br>`CSS`
@@ -8,7 +11,10 @@ Repo for App Street Assignment
 <br>`PHP`
 <br>`JS/JQuery`
 
-## Deployment Link on Heroku
+## Deployed at HeroKu
+
+Click Following : [![Heroku](http://heroku-badge.herokuapp.com/?app=appstreet-test&style=flat)](https://appstreet-test.herokuapp.com/index.php)
+
 
 ## Snapshots of App views
 ### Desktop View
