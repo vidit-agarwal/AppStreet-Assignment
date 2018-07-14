@@ -111,6 +111,20 @@
 		
 		
 	</div>
+
+	<div class="footer">
+		<div class="container">
+			<span>About</span>
+			<span>|</span>
+			<span>Contact</span>
+			<span>|</span>
+			<span>Privacy Policy</span>
+			<span>|</span>	
+			<span>Return Policy</span>
+		</div>
+		
+	</div>
+
 	<!--/Item Listing the container-->
 
 	<script>

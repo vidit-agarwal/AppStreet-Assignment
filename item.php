@@ -474,11 +474,18 @@ function color_name_to_hex($color_name)
 
 	<div class="footer">
 		<div class="container">
-			About | Contact | Privacy Policy | Return Policy	
+			<span>About</span>
+			<span>|</span>
+			<span>Contact</span>
+			<span>|</span>
+			<span>Privacy Policy</span>
+			<span>|</span>	
+			<span>Return Policy</span>
 		</div>
 		
 	</div>
 
 
 </body>
+<script type="text/javascript" src="js/contentHide.js"></script>
 </html>
