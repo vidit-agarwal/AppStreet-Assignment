@@ -1,0 +1,409 @@
+body
+{
+	font-family: sans-serif !important;
+}
+.desc-wrapper
+{
+	margin-top: 4%;
+}
+.single-main
+{
+	padding: 0;
+}
+.col-md-12 , .col-md-6 , .col-md-8 , .col-md-4 , .col-7 , .col-5 , .col-lg-6 , .col-lg-8 , .col-lg-4
+{
+	padding: 0 !important;
+}
+.col-md-6 , .col-md-8 , .col-md-4 , .col-7 , .col-5 , .col-lg-6 , .col-lg-4 , .col-lg-8
+{
+	display: inline;
+	float:left;
+}
+.section-left
+{
+	padding-right: 15px !important;
+	padding-left: 15px !important;
+}
+.flexslider {
+	margin: 0 0 0px !important;
+}
+.h3{
+	font-weight: 800 !important;
+}
+.product_heading , .small_line , .product_description ,.more , .top_break_line, .break_line , .price_detail , .variation
+{
+	margin-left:20px;
+}
+.product_heading
+{
+	font-family: sans-serif !important; 
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-top: 10px;
+	font-size: 20px !important;
+	color: #2f2f2f !important;
+}
+.small_line
+{
+	background-color:#00abab;
+	height: 4px;
+	width: 15%;
+	min-height: 4px;
+	min-width: 35px;
+	
+	margin-top:2px;
+	border-radius: 5px;
+}
+
+.product_description
+{
+	margin-top: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #a7a7a7;
+	font-family: sans-serif;
+	word-wrap: break-word;
+	line-height: 2;
+	text-align: justify;
+	text-justify : inter-word;
+}
+
+.more
+{
+	font-weight: 700;
+	font-size: 15px;
+	color:#02b1b1;
+	cursor: pointer;
+}
+.break_line , .top_break_line
+{
+	background-color: #efefef;
+	min-height: 2px;
+	width: 100%;
+	margin-top: 35px;
+}
+
+.price_detail
+{
+	margin-top: 30px;
+}
+.disc_price
+{
+	font-weight: 800;
+	font-size: 20px;
+	color: #2f2f2f !important;
+	font-family: sans-serif !important;
+}
+.cur_price
+{
+	margin-left: 15px;
+	text-decoration: line-through;
+	font-weight: 800;
+	color:#a7a7a7;
+	font-size: 15px;
+	vertical-align: baseline;
+
+}
+.discount span
+{
+	color:#02b1b1;
+	font-weight: 600;
+	font-size: 13.5px;
+	margin-top: 10px;
+	vertical-align: baseline;
+}
+.discount span:nth-child(2) , .discount span:nth-child(3)
+{
+	font-weight: 800;
+}
+
+.taxes
+{
+	color: #a7a7a7;
+	vertical-align: baseline;
+	font-weight: 600;
+	
+	font-size: 12px;
+	
+	margin-top: 10px;
+}
+
+.variation
+{
+	margin-top: 30px;
+}
+.var_col  , .size_var
+{
+	font-size: 13px;
+	font-weight: 900;
+	color: #909090;
+	letter-spacing: 0.5px;
+}
+.color
+{
+	margin-top: 25px;
+	display: inline-block;
+
+}
+.col_col
+{
+	border-radius: 50%;
+	min-width: 15px;
+	width:15px;
+	height: 15px;
+	min-height: 15px;
+	position: relative;
+	display: inline;
+	float: left;
+	margin-right: 6px;
+	background-color: #a2a2a2;
+}
+.col_name
+{
+	display: inline-block;
+	float: left;
+	font-weight: 400;
+	color: #888888;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.col_detail_selected
+{
+	background-color: #d8d8d8;
+}
+.col_detail
+{
+	
+	border-radius: 5px;
+	height: 40px;
+	width: fit-content;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	display: inline;
+	float:left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.size_var
+{
+	margin-top: 20px;
+}
+.size_chart
+{
+	color: #888888;
+	margin-top: 25px;
+	display: inline-block;
+}
+.size_wrap
+{
+	width:fit-content;
+	height: auto;
+	border-radius: 5px;
+	padding: 10px;
+	display: inline;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 5px 15px 5px 15px; 
+	border: 2px solid #d8d8d8;
+}
+.qty
+{
+	margin-top: 0px;
+}
+.qty > div
+{
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 0px;
+	color: #2f2f2f;
+	font-family: "Lucida Console", Monaco, monospace !important ;
+
+}
+.sel_qty
+{
+	margin-top: 10px;
+	display: inline-flex;
+	width:90px;
+	border-radius: 5px;
+	border: 1px solid #02b1b1 ;
+	height:auto;
+}
+.sel_qty div
+{
+	color: white;
+	padding: 5px;
+	text-align: center;
+	width: 33%;
+
+}
+.sel_qty div:nth-child(even)
+{
+	background-color: #02b1b1;
+}
+
+.sel_qty div:nth-child(odd)
+{
+	color: #02b1b1;
+	font-weight: 700;
+}
+
+.add_cart
+{
+	margin-top: 30px;
+	width: 85%;
+	height: auto;
+	color: white;
+	text-align: center;
+	font-weight: 800;
+	background-color: #02b1b1;
+	border-radius: 5px;
+	letter-spacing: 0.1px;
+	font-family: "Lucida Console", Monaco, monospace  ;
+	padding: 10px 0px 10px 0px;
+	margin-bottom: 20px;
+}
+
+.footer
+{
+	font-size: 10px;
+	color: #efefef;
+	display: inline-flex;
+   width: 100%;
+   background-color: black;
+   color: white;
+   padding-top: 30px;
+   padding-bottom: 30px;
+  
+   text-align: left;
+   position: relative;
+   bottom: 0;
+
+}
+
+/*Overwritting flexslider css*/
+.flexslider .slides img
+{
+	width: 100% !important;
+	height: 550px !important;
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+}
+.flex-control-thumbs img
+{
+	width: 70px !important;
+	max-width: 70px !important;
+	height: 70px !important;
+	margin-top: 15px;
+	text-align: center;
+	align-items: center;
+}
+
+
+@media only screen and  (max-width: 320px)
+{
+	.footer
+	{
+		text-align: center;
+		position: relative;
+		bottom: 0;
+	}
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px)
+{
+	.footer
+	{
+		text-align: center;
+		position: relative;
+		bottom: 0;
+	}
+	.navbar
+	{
+		box-shadow: 0px 0px 0px white;
+	}
+	.container-fluid
+	{
+		margin:0 !important;
+		padding:3px 0px 0px 0px !important;
+	}
+}
+@media only screen and (min-device-width:480px) and (max-width: 780px)
+{
+	.footer
+	{
+		text-align: center;
+		position: relative;
+		bottom: 0;
+	}
+
+	.navbar
+	{
+		box-shadow: 0px 0px 0px white;
+	}
+	.container-fluid
+	{
+		margin:0 !important;
+		padding:3px 0px 0px 0px !important;
+	}
+	.container
+	{
+		margin: 0 !important ;
+		padding : 0px !important;
+		max-width: 780px !important;
+	}
+	.top_break_line
+	{
+		display: inline-block !important;
+	}
+	.flexslider .slides img
+	{
+		width: auto;	
+	}
+	.desc_wrapper
+	{
+		margin-top:0.5%;
+	}
+	.product_heading , .small_line , .product_description ,.more , .top_break_line, .break_line , .price_detail , .variation
+	{
+		margin-left:0px;
+	}
+
+}
+@media only screen and (min-device-width:780px) and (max-width: 1000px)
+{
+
+
+	.footer
+	{
+		text-align: left;
+		position: relative;
+		bottom: 0;
+	}
+	.navbar
+	{
+		box-shadow: 0px 0px 0px white;
+	}
+	.container-fluid
+	{
+		margin:0 !important;
+		padding:3px 0px 0px 0px !important;
+	}
+	
+	
+}
+
+@media only screen and (min-device-width:1000px) and (max-width: 1440px)
+{
+	.footer
+	{
+		text-align: left;
+		position: absolute;
+		bottom: 0;
+	}
+}
