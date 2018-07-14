@@ -2,9 +2,8 @@
 <html>
 <head>
 	<title>Home Page - Item Listing Page</title>
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	
+	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -13,6 +12,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 
@@ -53,7 +53,7 @@
 	<div class="item-listing-container container-fluid">
 		<div class="container">
 			
-			<ul id="ul-wrapper" style="display:flex ; list-style: none; flex-wrap: wrap ; width:100% ; height:auto ; padding-bottom:5% ; padding-left:0%; padding-top:10px;">
+			<ul id="ul-wrapper" style="display:flex ; list-style: none; flex-wrap: wrap ; width:100% ; height:auto ;  padding-left:0%; padding-top:10px;">
 				
 				
 			
@@ -73,7 +73,7 @@
 					
 					foreach ($api_data as $api_data_name => $api_data_value) 
 					{
-			  						echo ' <li class="li-wrap">' ;
+			  						echo ' <a href="item.php?_id='.$api_data_value['_id'].'"><li class="li-wrap">' ;
 				  					echo '<div class="item-wrap">' ;
 									foreach ($api_data_value['images'] as $image_index => $img_value) {
 										echo "<img src='".$img_value."' alt='product_image' class='rounded fix-images'>" ;
@@ -81,10 +81,11 @@
 									}
 					
 									echo '<p class="h6 product_name">'.substr($api_data_value['name'], 0 , strrpos($api_data_value['name'], '(')).'</p>' ;
-									echo '<p class="h6 product_price"> &#8377;'.$api_data_value['mark_price'].'</p>';	
+
+									echo '<p class="h6 product_price"> &#8377;&nbsp;'.number_format($api_data_value['sale_price']).'</p>';	
 
 									echo '</div>' ;
-									echo '</li>' ;
+									echo '</li></a>' ;
 			  						
 					}
 				}
@@ -92,16 +93,37 @@
 
 			</ul>	
 
+			<div class="loading_gif">
+				<img src="asset/ajax-loader.gif">
+			</div>
+
+			<div class="more_load">
+				load more
+			</div>
+
+			<div class="no_more_load">
+				No more items 
+			</div>
+
 		</div>
+
+
+		
 		
 	</div>
 	<!--/Item Listing the container-->
 
 	<script>
+		var countNumber =2 ;
+		var scrollPos = 0 ;
+		var status = true ;
+
 		$(window).scroll(function(){
-			var countNumber =2 ;
-			if($(window).scrollTop() >= $(document).height() - $(window).height() - 500 )
+		
+		
+			if($(window).scrollTop() + $(window).height() == $(document).height()) //window is scrolled to bottom
 			{
+				//$(".loading_gif").show() ;
 				//ajax call to a page to load dynamic data ;
 				$.ajax({
 				  
@@ -111,15 +133,32 @@
 				  		count: countNumber 
 				   }
 				}).done(function( msg ) {
-				  	console.log(countNumber) ;
-				  	countNumber++;
-				  $("#ul-wrapper").append(msg) ;
-				 
+				  	//console.log(msg.length);
+				  	if(msg=='')
+				  	{	
+				  		status = false ;
+				  		$(".loading_gif").hide() ;
+				  		$(".no_more_load").show() ;
+				  		$(".more_load").hide() ;
+				  		//console.log("Finished ") ;
+				  		return;
+				  	}			 
+				  	else
+				  	{
+				  	
+						$("#ul-wrapper").append(msg) ;
+						countNumber= countNumber+1 ;
+				  	}
 				});
-				 
 			}
+			else
+			{
+				//window is scrolled top , nothing to do
+			}
+  			  //scrollPos = curScrollPos;
+  			
 		}) ;
-	</script>
+	</script> 
 
 </body>
 </html>
